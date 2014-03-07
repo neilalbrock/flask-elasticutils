@@ -22,7 +22,7 @@ setup(
     platforms='any',
     install_requires=[
         'Flask',
-        'elasticutils==dev',
+        'elasticutils>=0.9.dev',
     ],
     classifiers=[
         'Environment :: Web Environment',
