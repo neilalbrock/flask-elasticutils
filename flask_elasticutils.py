@@ -1,3 +1,5 @@
+import os
+
 from flask import current_app
 
 from elasticutils import S
@@ -12,7 +14,8 @@ class ElasticUtils(object):
             self.init_app(app)
 
     def init_app(self, app):
-        app.config.setdefault('ELASTICSEARCH_URL', 'http://localhost:9200/')
+        app.config.setdefault('ELASTICSEARCH_URL',
+                os.environ.get('ELASTICSEARCH_URL', 'http://localhost:9200/'))
 
         if not hasattr(app, 'extensions'):
             app.extensions = {}
