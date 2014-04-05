@@ -15,7 +15,7 @@ class ElasticUtils(object):
 
     def init_app(self, app):
         app.config.setdefault('ELASTICSEARCH_URL',
-                os.environ.get('ELASTICSEARCH_URL', 'http://localhost:9200/'))
+                os.environ.get('ELASTICSEARCH_URL', 'localhost:9200'))
 
         if not hasattr(app, 'extensions'):
             app.extensions = {}

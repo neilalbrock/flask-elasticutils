@@ -9,7 +9,7 @@ def _read(fn):
 
 setup(
     name='Flask-ElasticUtils',
-    version='0.1.6',
+    version='0.1.7',
     url='https://github.com/neilalbrock/flask-elasticutils/',
     license='BSD',
     author='Neil Albrock - Atomised',
@@ -22,7 +22,7 @@ setup(
     platforms='any',
     install_requires=[
         'Flask',
-        'elasticutils==dev',
+        'elasticutils>=0.9',
     ],
     classifiers=[
         'Environment :: Web Environment',
